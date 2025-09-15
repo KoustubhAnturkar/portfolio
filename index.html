@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2; url=pages/home/index.html">
+    <title>Loading...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #000;
+            color: #00ff00;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .game-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 8px solid #fff;
+            margin: 0;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .loading {
+            animation: glitch 1s linear infinite;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .redirect-text {
+            font-size: 0.8em;
+            margin-top: 20px;
+        }
+
+        @keyframes glitch {
+            2%, 64% {
+                transform: translate(2px,0) skew(0deg);
+            }
+            4%, 60% {
+                transform: translate(-2px,0) skew(0deg);
+            }
+            62% {
+                transform: translate(0,0) skew(5deg);
+            }
+        }
+
+        .dots::after {
+            content: '';
+            animation: dots 2s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <p class="loading">LOADING<span class="dots"></span></p>
+        <p class="redirect-text">If you are not redirected, <a href="pages/home/index.html">click here</a></p>
+    </div>
+</body>
+</html>
