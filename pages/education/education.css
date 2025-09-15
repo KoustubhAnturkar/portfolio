@@ -1,0 +1,84 @@
+/* Education Page Styles */
+.education-container {
+    max-width: 800px;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.education-card {
+    border: 4px solid #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #000;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(10px);
+    border-color: #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.education-card::before {
+    content: "►";
+    position: absolute;
+    left: -30px;
+    color: #00ff00;
+    animation: blink 1s infinite;
+    font-size: 0.8em;
+}
+
+.education-card h3 {
+    color: #00ff00;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.education-card .school {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.education-card .year {
+    color: #888;
+    font-size: 0.8em;
+    margin-bottom: 15px;
+}
+
+.education-card .description {
+    font-size: 0.8em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.achievements {
+    margin-top: 15px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.8em;
+}
+
+.achievement-item::before {
+    content: "✦";
+    color: #00ff00;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .education-container {
+        padding: 10px 20px;
+    }
+    
+    .education-card::before {
+        left: -20px;
+    }
+}

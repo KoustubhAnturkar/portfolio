@@ -1,0 +1,80 @@
+/* Home Page Style */
+.resume-btn {
+    background: #000;
+    border: 3px solid #ff0000;
+    color: #ff0000;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em;
+}ome-screen {
+    text-align: center;
+    padding: 10px;
+    max-height: calc(100vh - 160px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.resume-btn {
+    background: #000;
+    border: 4px solid #00ff00;
+    color: #00ff00;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.resume-btn:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.resume-btn::before {
+    content: "[ ";
+}
+
+.resume-btn::after {
+    content: " ]";
+}
+
+.welcome-screen h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.welcome-screen h2 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #00ff00;
+}
+
+.press-start {
+    animation: blink 1s infinite;
+    margin-top: 20px;
+}
+
+@keyframes blink {
+    0%, 49% {
+        opacity: 0;
+    }
+    50%, 100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,163 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Game Container */
+.game-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 8px solid #fff;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Header Styles */
+.game-header {
+    padding: 20px;
+    border-bottom: 4px solid #fff;
+}
+
+.game-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.game-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.game-menu a:hover {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.game-menu a.active {
+    color: #00ff00;
+    border-bottom: 4px solid #00ff00;
+}
+
+/* Main Content */
+.game-screen {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hide scrollbars but keep functionality */
+.project-grid,
+.timeline,
+.education-container,
+.contact-form {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.project-grid::-webkit-scrollbar,
+.timeline::-webkit-scrollbar,
+.education-container::-webkit-scrollbar,
+.contact-form::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Footer Styles */
+.game-footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid #fff;
+    font-size: 0.8em;
+}
+
+/* Animations */
+.glitch {
+    animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+    2%, 64% {
+        transform: translate(2px,0) skew(0deg);
+    }
+    4%, 60% {
+        transform: translate(-2px,0) skew(0deg);
+    }
+    62% {
+        transform: translate(0,0) skew(5deg);
+    }
+}
+
+/* Buttons */
+.start-button {
+    background: #000;
+    border: 4px solid #00ff00;
+    color: #00ff00;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.next-level {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    background: #000;
+    border: 4px solid #00ff00;
+    color: #00ff00;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 0.8em;
+    z-index: 100;
+}
+
+.next-level:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    transform: translateX(5px);
+}
+
+.next-level::after {
+    content: " ►";
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
